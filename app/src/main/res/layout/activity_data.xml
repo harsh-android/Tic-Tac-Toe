@@ -7,6 +7,7 @@
     android:gravity="center"
     tools:context=".DataActivity">
 
+
     <TextView
         android:id="@+id/text_data"
         android:layout_width="wrap_content"
