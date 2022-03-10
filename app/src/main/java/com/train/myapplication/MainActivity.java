@@ -203,6 +203,7 @@ public class MainActivity extends AppCompatActivity {
     private void ResetData() {
         count = 1;
         cross.clear();
+        circle.clear();
         i1.setImageResource(0);
         i2.setImageResource(0);
         i3.setImageResource(0);
