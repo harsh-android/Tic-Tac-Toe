@@ -3,6 +3,7 @@ package com.train.myapplication;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -28,11 +29,14 @@ public class MainActivity extends AppCompatActivity {
 
     int count = 1;
     CardView reset;
+    int c1,c2,c3,c4,c5,c6,c7,c8,c9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        c1 = c2 = c3 = c4 = c5 = c6 = c7 = c8 = c9 = 0;
 
         reset = findViewById(R.id.reset);
         i1 = findViewById(R.id.i1);
@@ -45,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
         i8 = findViewById(R.id.i8);
         i9 = findViewById(R.id.i9);
 
+
+
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,144 +62,169 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (count % 2 == 0) {
-                    circle.add(1);
-                    checkCircle();
-                    i1.setImageResource(R.drawable.circle);
-                } else {
-                    cross.add(1);
-                    checkCross();
-                    i1.setImageResource(R.drawable.cross);
+                if (c1 == 0) {
+                    c1++;
+                    if (count % 2 == 0) {
+                        circle.add(1);
+                        checkCircle();
+                        i1.setImageResource(R.drawable.circle);
+                    } else {
+                        cross.add(1);
+                        checkCross();
+                        i1.setImageResource(R.drawable.cross);
+                    }
+                    count++;
                 }
-                count++;
             }
         });
         i2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if (count % 2 == 0) {
-                    circle.add(2);
-                    checkCircle();
-                    i2.setImageResource(R.drawable.circle);
-                } else {
-                    cross.add(2);
-                    checkCross();
-                    i2.setImageResource(R.drawable.cross);
+                if (c2 == 0) {
+                    c2++;
+                    if (count % 2 == 0) {
+                        circle.add(2);
+                        checkCircle();
+                        i2.setImageResource(R.drawable.circle);
+                    } else {
+                        cross.add(2);
+                        checkCross();
+                        i2.setImageResource(R.drawable.cross);
+                    }
+                    count++;
                 }
-                count++;
             }
         });
         i3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if (count % 2 == 0) {
-                    circle.add(3);
-                    checkCircle();
-                    i3.setImageResource(R.drawable.circle);
-                } else {
-                    cross.add(3);
-                    checkCross();
-                    i3.setImageResource(R.drawable.cross);
+                if (c3 == 0) {
+                    c3++;
+                    if (count % 2 == 0) {
+                        circle.add(3);
+                        checkCircle();
+                        i3.setImageResource(R.drawable.circle);
+                    } else {
+                        cross.add(3);
+                        checkCross();
+                        i3.setImageResource(R.drawable.cross);
+                    }
+                    count++;
                 }
-                count++;
             }
         });
         i4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if (count % 2 == 0) {
-                    circle.add(4);
-                    checkCircle();
-                    i4.setImageResource(R.drawable.circle);
-                } else {
-                    cross.add(4);
-                    checkCross();
-                    i4.setImageResource(R.drawable.cross);
+                if (c4 == 0) {
+                    c4++;
+                    if (count % 2 == 0) {
+                        circle.add(4);
+                        checkCircle();
+                        i4.setImageResource(R.drawable.circle);
+                    } else {
+                        cross.add(4);
+                        checkCross();
+                        i4.setImageResource(R.drawable.cross);
+                    }
+                    count++;
                 }
-                count++;
             }
         });
         i5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if (count % 2 == 0) {
-                    circle.add(5);
-                    checkCircle();
-                    i5.setImageResource(R.drawable.circle);
-                } else {
-                    cross.add(5);
-                    checkCross();
-                    i5.setImageResource(R.drawable.cross);
+                if (c5 == 0) {
+                    c5++;
+                    if (count % 2 == 0) {
+                        circle.add(5);
+                        checkCircle();
+                        i5.setImageResource(R.drawable.circle);
+                    } else {
+                        cross.add(5);
+                        checkCross();
+                        i5.setImageResource(R.drawable.cross);
+                    }
+                    count++;
                 }
-                count++;
             }
         });
         i6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (c6 == 0) {
+                    c6++;
 
-                if (count % 2 == 0) {
-                    circle.add(6);
-                    checkCircle();
-                    i6.setImageResource(R.drawable.circle);
-                } else {
-                    cross.add(6);
-                    checkCross();
-                    i6.setImageResource(R.drawable.cross);
+                    if (count % 2 == 0) {
+                        circle.add(6);
+                        checkCircle();
+                        i6.setImageResource(R.drawable.circle);
+                    } else {
+                        cross.add(6);
+                        checkCross();
+                        i6.setImageResource(R.drawable.cross);
+                    }
+                    count++;
                 }
-                count++;
             }
         });
         i7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                if (count % 2 == 0) {
-                    circle.add(7);
-                    checkCircle();
-                    i7.setImageResource(R.drawable.circle);
-                } else {
-                    cross.add(7);
-                    checkCross();
-                    i7.setImageResource(R.drawable.cross);
+                if (c7 == 0) {
+                    c7++;
+                    if (count % 2 == 0) {
+                        circle.add(7);
+                        checkCircle();
+                        i7.setImageResource(R.drawable.circle);
+                    } else {
+                        cross.add(7);
+                        checkCross();
+                        i7.setImageResource(R.drawable.cross);
+                    }
+                    count++;
                 }
-                count++;
             }
         });
         i8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                if (count % 2 == 0) {
-                    circle.add(8);
-                    checkCircle();
-                    i8.setImageResource(R.drawable.circle);
-                } else {
-                    cross.add(8);
-                    checkCross();
-                    i8.setImageResource(R.drawable.cross);
+                if (c8 == 0) {
+                    c8++;
+                    if (count % 2 == 0) {
+                        circle.add(8);
+                        checkCircle();
+                        i8.setImageResource(R.drawable.circle);
+                    } else {
+                        cross.add(8);
+                        checkCross();
+                        i8.setImageResource(R.drawable.cross);
+                    }
+                    count++;
                 }
-                count++;
             }
         });
         i9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (c9 == 0) {
+                    c9++;
 
-                if (count % 2 == 0) {
-                    circle.add(9);
-                    checkCircle();
-                    i9.setImageResource(R.drawable.circle);
-                } else {
-                    cross.add(9);
-                    checkCross();
-                    i9.setImageResource(R.drawable.cross);
+                    if (count % 2 == 0) {
+                        circle.add(9);
+                        checkCircle();
+                        i9.setImageResource(R.drawable.circle);
+                    } else {
+                        cross.add(9);
+                        checkCross();
+                        i9.setImageResource(R.drawable.cross);
+                    }
+                    count++;
                 }
-                count++;
             }
         });
 
@@ -204,6 +235,7 @@ public class MainActivity extends AppCompatActivity {
         count = 1;
         cross.clear();
         circle.clear();
+        c1 = c2 = c3 = c4 = c5 = c6 = c7 = c8 = c9 = 0;
         i1.setImageResource(0);
         i2.setImageResource(0);
         i3.setImageResource(0);
